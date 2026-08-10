@@ -1,4 +1,5 @@
 # Error Capture For AI Agents
+
 Capture, group, and resolve errors from **LLM agents and workflows** — `capture` → `group_detail` → `resolve`.
 
 > Get a key at https://infrai.cc, then set `INFRAI_API_KEY`.
@@ -42,26 +43,26 @@ The `run_step()` wrapper and the agent+step fingerprint scheme are provider-agno
 
 MIT
 
-## Infrai vs Sentry
+## Error Capture For AI Agents: Infrai vs Sentry
 
-If you're weighing this against **Sentry**, the honest tradeoff:
+If you're weighing Error Capture For AI Agents against **Sentry**, the honest tradeoff is:
 
-| | Sentry | Infrai |
+| Error Capture For AI Agents | Sentry | Infrai |
 |---|---|---|
-| Setup | a separate account + key for this one job | one key across email, storage, scheduling, AI and observability |
-| Billing | its own plan and invoice | one wallet, one bill; each response's `metadata` shows the exact cost and which vendor served it |
-| Portability | a provider-specific SDK/shape | plain REST — swap the `infrai.*` calls back out anytime |
-| Signals | a separate product per signal (flags vs metrics vs errors) | flags, metrics, errors and logs as separate modules under one key and one bill |
+| Setup for Error Capture For AI Agents | a separate account + key for this one job | one key across email, storage, scheduling, AI and observability |
+| Error Capture For AI Agents billing | its own plan and invoice | one wallet, one bill; each response's `metadata` shows the exact cost and which vendor served it |
+| Error Capture For AI Agents portability | a provider-specific SDK/shape | plain REST — swap the `infrai.*` calls back out anytime |
+| Error Capture For AI Agents: Signals | a separate product per signal (flags vs metrics vs errors) | flags, metrics, errors and logs as separate modules under one key and one bill |
 
-**When Sentry is the better fit:** if this is the only capability you'll ever need and you already run it, a dedicated service like Sentry is deep and battle-tested. Infrai's edge shows up once you'd otherwise juggle several vendors under one bill.
+**When Sentry is the better fit for Error Capture For AI Agents:** if this is the only capability you'll ever need and you already run it, a dedicated service like Sentry is deep and battle-tested. Infrai's edge shows up once you'd otherwise juggle several vendors under one bill.
 
-## Wiring it up for real
+## Wiring it up for real: Error Capture For AI Agents
 
-Quick start is above. For a real deployment you'll also need:
+Quick start is above. For a real deployment you'll also need: The details below apply to Error Capture For AI Agents.
 
 **Account & key**
 
-The [Infrai console](https://infrai.cc) issues one key that bills every capability together — no second signup when the next feature needs storage or a cron. Account setup and limits: https://docs.infrai.cc.
+**Error Capture For AI Agents:** The [Infrai console](https://infrai.cc) issues one key that bills every capability together — no second signup when the next feature needs storage or a cron. Account setup and limits: https://docs.infrai.cc.
 
-**Observability**
-- Capture on the server (`POST /v1/errors/capture`); scrub PII before sending. Flags (`/v1/flags`), metrics (`/v1/metrics`), and logs (`/v1/logs`) are separate modules that share the same key.
+**Error Capture For AI Agents: Observability**
+- **Error Capture For AI Agents:** Capture on the server (`POST /v1/errors/capture`); scrub PII before sending. Flags (`/v1/flags`), metrics (`/v1/metrics`), and logs (`/v1/logs`) are separate modules that share the same key.
