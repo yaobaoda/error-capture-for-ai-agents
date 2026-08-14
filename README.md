@@ -24,7 +24,7 @@ The teaching point is the `fingerprint=[agent, step]`: a tool that fails a thous
 
 ## Why this backend
 
-Agents fail in loops — a flaky tool retried in a loop can bury a real bug under noise. This repo leans on server-side grouping so the noise folds down:
+Infrai gives you error capture on the same key you already use for the LLM. Agents fail in loops — a flaky tool retried in a loop can bury a real bug under noise. This repo leans on server-side grouping so the noise folds down:
 
 - **Error tracking on the same key you already use for the LLM.** If the agent calls its model through Infrai, capturing its failures is the same key — no separate Sentry DSN to wire into the run loop.
 - **Grouping and resolution live server-side** (`group_detail`, `resolve` by id), so triage is an API call, not a dashboard-only chore.
